@@ -14,7 +14,7 @@
         #clock {
             width: 300px;
             height: 300px;
-            background: black;
+            background: rgba(0, 0, 0, 0.634);
             margin: auto;
             border-radius: 50%;
             position: relative;
@@ -67,21 +67,121 @@
             top: 60%;
         }
 
-
-        .test {
-            -webkit-animation: circle 3600s steps(360) infinite;
-            animation: circle 3s steps(360) infinite;
-            filter: hue-rotate(120deg);
+        .gear {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
-        @-webkit-keyframes circle {
-            from {
-                transform: rotate(0deg);
-            }
+        .gear-inner {
+            z-index: 0;
+        }
 
-            to {
-                transform: rotate(360deg);
-            }
+        .gear16 {
+            width: 300px;
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            animation: circle2 20s steps(360) infinite;
+            z-index: 0;
+        }
+
+        .gear1 {
+            width: 100px;
+            position: absolute;
+            top: 100px;
+            left: 250px;
+            animation: circle 60s steps(360) infinite;
+        }
+
+        .gear2 {
+            width: 100px;
+            position: absolute;
+            top: 200px;
+            left: 250px;
+            animation: circle 60s steps(360) infinite;
+        }
+
+        .gear3 {
+            width: 160px;
+            position: absolute;
+            top: 180px;
+            left: 280px;
+            animation: circle2 60s steps(360) infinite;
+        }
+
+        .gear4 {
+            width: 60px;
+            position: absolute;
+            top: 180px;
+            left: 280px;
+            animation: circle2 20s steps(360) infinite;
+        }
+
+        .gear15 {
+            width: 130px;
+            position: absolute;
+            top: 100px;
+            left: 50px;
+            animation: circle 20s steps(360) infinite;
+        }
+
+        .gear6 {
+            width: 140px;
+            position: absolute;
+            top: 300px;
+            left: 100px;
+            animation: circle2 20s steps(360) infinite;
+            z-index: 3;
+        }
+
+        .gear7 {
+            width: 50px;
+            position: absolute;
+            top: 200px;
+            left: 100px;
+            animation: circle2 20s steps(360) infinite;
+        }
+
+        .gear8 {
+            width: 80px;
+            position: absolute;
+            top: 200px;
+            left: 40px;
+            animation: circle2 20s steps(360) infinite;
+            z-index: 1;
+        }
+
+        .gear10 {
+            width: 220px;
+            position: absolute;
+            top: 280px;
+            left: 195px;
+            animation: circle2 20s steps(360) infinite;
+            z-index: 1;
+        }
+
+        .gear10 {
+            width: 220px;
+            position: absolute;
+            top: 280px;
+            left: 195px;
+            animation: circle2 20s steps(360) infinite;
+            z-index: 1;
+        }
+
+        .gear17 {
+            width: 340px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+
         }
 
         @keyframes circle {
@@ -93,6 +193,42 @@
                 transform: rotate(360deg);
             }
         }
+
+        @keyframes circle2 {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+
+
+
+        .bottom {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .border1 {
+            width: 600px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .border2 {
+            width: 500px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
     </style>
 </head>
 
@@ -100,10 +236,32 @@
     <div id="clock">
         <div id="hour"></div>
         <div id="minute"></div>
-        <img class="test" src="./images/gear1.png" alt="">
+
         <div id="second"></div>
         <p id="text">00:00:00</p>
     </div>
+
+    <div class="bottom">
+        <img class="border1" src="./images/border1.png" alt="">
+        <!-- <img class="border2" src="./images/border2.png" alt=""> -->
+        <div class="gear">
+            <img class="gear1" src="./images/gear1.png" alt="">
+            <img class="gear3" src="./images/gear3.png" alt="">
+            <img class="gear4" src="./images/gear4.png" alt="">
+            <img class="gear15" src="./images/gear15.png" alt="">
+            <img class="gear6" src="./images/gear6.png" alt="">
+            <img class="gear7" src="./images/gear7.png" alt="">
+            <img class="gear8" src="./images/gear8.png" alt="">
+            <img class="gear10" src="./images/gear10.png" alt="">
+            <img class="gear-inner" src="./images/gear6.png" alt="">
+
+            <img class="gear17" src="./images/gear17.png" alt="">
+            <!-- <img class="gear16" src="./images/gear16.png" alt=""> -->
+        </div>
+    </div>
+    <img src="" alt="">
+
+
 
     <script>
         const elHour = document.getElementById('hour')
