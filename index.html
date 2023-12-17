@@ -9,6 +9,135 @@
         body {
             margin: 0;
             height: 100vh;
+            background-image: url(./images/gui/main_menu.png);
+        }
+
+        .container {
+            margin: 0;
+            height: 100vh;
+            background-image: url(./images/gui/border.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* .border {
+            margin: 0;
+            height: 100vh;
+            background-image: url(./images/gui/border.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        } */
+
+        .circle {
+            width: 1500px;
+            height: 1500px;
+            background-image: url(./images/gui/circle2.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-origin: border-box;
+            /* background-position: center; */
+            animation: ClockWise 30s steps(720) infinite;
+            position: absolute;
+            top: -35%;
+            left: 7%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            /* transform-origin: center; */
+        }
+
+        .circle2 {
+            content: "";
+            width: 1450px;
+            height: 1450px;
+            background-image: url(./images/gui/circle1.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-origin: border-box;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            /* transform-origin: center; */
+        }
+
+        .ray {
+            width: 1450px;
+            height: 1450px;
+            opacity: 0.6;
+            background-image: url(./images/gui/rays.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-origin: border-box;
+            /* position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5; */
+            animation: ClockWise 35s steps(720) infinite;
+            position: absolute;
+            top: -35%;
+            left: 7%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+        }
+
+        .core {
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background-image: url(./images/gui/constellations-backing.png);
+            /* background-image: url(./images/gui/constellationsMain.png); */
+            background-size: contain;
+            background-repeat: no-repeat;
+            /* background-origin: border-box; */
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+
+        }
+
+        .core img {
+            width: 700px;
+            height: 700px;
+            animation: CounterClockWise 35s steps(720) infinite;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            transform-origin: center;
+            object-fit: fill;
+            object-position: center;
+        }
+
+        .meteor {
+            width: 1400px;
+            height: 1400px;
+            background-image: url(./images/gui/comet1.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-origin: border-box;
+            animation: CounterClockWise 30s steps(720) infinite;
+            position: absolute;
+            top: -35%;
+            left: 7%;
+            transform: translate(-50%, -50%);
+            z-index: 11;
+            transform-origin: center;
+            object-fit: fill;
+            object-position: center;
         }
 
         #clock {
@@ -67,124 +196,8 @@
             top: 60%;
         }
 
-        .gear {
-            width: 500px;
-            height: 500px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .gear-inner {
-            z-index: 0;
-        }
-
-        .gear16 {
-            width: 260px;
-            position: absolute;
-            top: 25%;
-            left: 25%;
-            transform: translate(-50%, -50%);
-            animation: circle2 20s steps(360) infinite;
-            z-index: 0;
-        }
-
-        .gear1 {
-            width: 100px;
-            position: absolute;
-            top: 100px;
-            left: 250px;
-            animation: circle 60s steps(360) infinite;
-        }
-
-        .gear2 {
-            width: 100px;
-            position: absolute;
-            top: 200px;
-            left: 250px;
-            animation: circle 60s steps(360) infinite;
-        }
-
-        .gear3 {
-            width: 160px;
-            position: absolute;
-            top: 180px;
-            left: 280px;
-            animation: circle2 60s steps(360) infinite;
-        }
-
-        .gear4 {
-            width: 60px;
-            position: absolute;
-            top: 180px;
-            left: 280px;
-            animation: circle2 20s steps(360) infinite;
-        }
-
-        .gear15 {
-            width: 130px;
-            position: absolute;
-            top: 100px;
-            left: 50px;
-            animation: circle 20s steps(360) infinite;
-        }
-
-        .gear6 {
-            width: 140px;
-            position: absolute;
-            top: 300px;
-            left: 100px;
-            animation: circle2 20s steps(360) infinite;
-            z-index: 3;
-        }
-
-        .gear7 {
-            width: 50px;
-            position: absolute;
-            top: 200px;
-            left: 100px;
-            animation: circle2 20s steps(360) infinite;
-        }
-
-        .gear8 {
-            width: 80px;
-            position: absolute;
-            top: 200px;
-            left: 40px;
-            animation: circle2 20s steps(360) infinite;
-            z-index: 1;
-        }
-
-        .gear10 {
-            width: 220px;
-            position: absolute;
-            top: 280px;
-            left: 195px;
-            animation: circle2 20s steps(360) infinite;
-            z-index: 1;
-        }
-
-        .gear10 {
-            width: 220px;
-            position: absolute;
-            top: 280px;
-            left: 195px;
-            animation: circle2 20s steps(360) infinite;
-            z-index: 1;
-        }
-
-        .gear17 {
-            width: 340px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: -1;
-
-        }
-
-        @keyframes circle {
+        /* 順時針 */
+        @keyframes ClockWise {
             from {
                 transform: rotate(0deg);
             }
@@ -194,7 +207,8 @@
             }
         }
 
-        @keyframes circle2 {
+        /* 逆時針 */
+        @keyframes CounterClockWise {
             from {
                 transform: rotate(0deg);
             }
@@ -203,63 +217,28 @@
                 transform: rotate(-360deg);
             }
         }
-
-
-
-        .bottom {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .border1 {
-            width: 600px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .border2 {
-            width: 500px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 10;
-        }
     </style>
 </head>
 
 <body>
-    <div id="clock">
-        <div id="hour"></div>
-        <div id="minute"></div>
+    <div class="container">
+        <div class="border">
 
-        <div id="second"></div>
-        <p id="text">00:00:00</p>
-    </div>
-
-    <div class="bottom">
-        <img class="border1" src="./images/border1.png" alt="">
-        <!-- <img class="border2" src="./images/border2.png" alt=""> -->
-        <div class="gear">
-            <img class="gear1" src="./images/gear1.png" alt="">
-            <img class="gear3" src="./images/gear3.png" alt="">
-            <img class="gear4" src="./images/gear4.png" alt="">
-            <img class="gear15" src="./images/gear15.png" alt="">
-            <img class="gear6" src="./images/gear6.png" alt="">
-            <img class="gear7" src="./images/gear7.png" alt="">
-            <img class="gear8" src="./images/gear8.png" alt="">
-            <img class="gear10" src="./images/gear10.png" alt="">
-            <img class="gear-inner" src="./images/gear6.png" alt="">
-
-            <img class="gear17" src="./images/gear17.png" alt="">
-            <img class="gear16" src="./images/gear16.png" alt="">
+            <div class="circle"></div>
+            <div class="circle2"></div>
+            <div class="ray"></div>
+            <div class="core">
+                <img src="./images/gui/constellationsMain.png" alt="">
+            </div>
+            <div class="meteor"></div>
         </div>
+        <!-- <div id="clock">
+            <div id="hour"></div>
+            <div id="minute"></div>
+            <div id="second"></div>
+            <p id="text">00:00:00</p>
+        </div> -->
     </div>
-    <img src="" alt="">
 
 
 
