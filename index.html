@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Noto+Sans:wght@400;700&display=swap');
+
         body {
             margin: 0;
             height: 100vh;
@@ -139,7 +141,8 @@
         }
 
         .reel-clock {
-            width: 100%;
+            /* width: 100%; */
+            width: 400px;
             height: 80px;
             background-image: url(./images/gui/namebox.png);
             background-size: contain;
@@ -152,12 +155,18 @@
         }
 
         #text {
-            width: 100%;
-            color: white;
+            /* width: 100%; */
+            font-size: 30px;
+            color: rgb(246, 243, 235);
+            text-shadow: 1px 1px 6px black;
             text-align: center;
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 10%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            z-index: 20;
+            font-family: 'Dancing Script', cursive;
+            /* font-family: 'Noto Sans', sans-serif; */
         }
 
         /* 動畫 */
@@ -267,9 +276,9 @@
 
 
     <script>
-        const elHour = document.getElementById('hour')
-        const elMinute = document.getElementById('minute')
-        const elSecond = document.getElementById('second')
+        // const elHour = document.getElementById('hour')
+        // const elMinute = document.getElementById('minute')
+        // const elSecond = document.getElementById('second')
         const elText = document.getElementById('text')
 
         const clock = () => {
@@ -278,9 +287,9 @@
             const minute = date.getMinutes()
             const second = date.getSeconds()
             // 360/12=30 且預設位置與00:00 差90度，要加回
-            elHour.style.transform = `rotate(${hour * 30 + 90}deg)`
-            elMinute.style.transform = `rotate(${minute * 6 + 90}deg)`
-            elSecond.style.transform = `rotate(${second * 6 + 90}deg)`
+            // elHour.style.transform = `rotate(${hour * 30 + 90}deg)`
+            // elMinute.style.transform = `rotate(${minute * 6 + 90}deg)`
+            // elSecond.style.transform = `rotate(${second * 6 + 90}deg)`
             elText.innerText = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}:${second.toString().padStart(2, '0')}`
             // .toString() 數字轉文字
             // .padStart(2,'0') ，.padStart(補到第幾位，前面要用補什麼)，用''代表文字
